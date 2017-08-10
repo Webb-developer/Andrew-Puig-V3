@@ -1,0 +1,22 @@
+{
+  "name": "andrew-puig-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puigandrew1/Andrew-Puig-V3.git"
+  },
+  "author": "Andrew Puig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puigandrew1/Andrew-Puig-V3/issues"
+  },
+  "homepage": "https://github.com/puigandrew1/Andrew-Puig-V3#readme",
+  "devDependencies": {
+    "gulp-amphtml-validator": "^1.0.1"
+  }
+}
