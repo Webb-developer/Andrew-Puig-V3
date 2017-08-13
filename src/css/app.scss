@@ -1,3 +1,106 @@
+$borderColor: currentColor;
+$borderWidth: 3px;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 html{
-    font-family: "Asap Condensed", sans-serif;
+    font-size: 62.5%;
+}
+
+
+body{
+    font-size: 4rem;
+    font-family: "VT323", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #dcdffe;
+    color: #061ac1;
+}
+
+
+h1, h2{
+    font-size: inherit;
+}
+
+
+a{
+    color: #4747da;
+}
+
+
+.gutter{
+    padding-left:  3rem;
+    padding-right: 3rem;
+}
+
+
+.main-header{
+    border-bottom: solid $borderWidth $borderColor;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    .h2{
+        margin-top: 0.3rem;
+        font-size: 1.8rem;
+    }
+}
+
+
+.section-pair{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.section-pair__item{
+    width: 50%;
+}
+
+
+.section{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-right:  solid $borderWidth $borderColor;
+    border-bottom: solid $borderWidth $borderColor;
+
+    .button{
+        margin-top: 1.2rem;
+    }
+}
+
+
+.list{
+    list-style-type: none;
+    margin-top: 1.2rem;
+}
+
+
+.list__item{
+    margin-top: 0.5rem;
+
+    a{
+        display: inline-block;
+    }
+}
+
+
+.button{
+    border: solid 2px currentColor;
+    padding: 1.1rem;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover{
+
+        del{
+            filter: blur(2px);
+        }
+    }
 }
