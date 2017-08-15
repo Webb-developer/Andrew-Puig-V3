@@ -15,11 +15,15 @@ html{
 
 
 body{
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "VT323", sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: #dcdffe;
     color: #061ac1;
+
+    @media (min-width: 750px){
+        font-size: 4rem;
+    }
 }
 
 
@@ -30,6 +34,10 @@ h1, h2{
 
 a{
     color: #4747da;
+
+    &:hover{
+        filter: invert(1);
+    }
 }
 
 
@@ -54,24 +62,33 @@ a{
 
 
 .section-pair{
-    display: flex;
-    flex-wrap: wrap;
+    
+    @media (min-width: 750px){
+        overflow: hidden;
+    }
 }
 
 
 .section-pair__item{
-    width: 50%;
+
+    @media (min-width: 750px){
+        width: 50%;
+        float: left;
+    }
 }
 
 
 .section{
     padding-top: 4rem;
     padding-bottom: 4rem;
-    border-right:  solid $borderWidth $borderColor;
     border-bottom: solid $borderWidth $borderColor;
 
     .button{
         margin-top: 1.2rem;
+    }
+
+    @media (min-width: 750px){
+        border-right:  solid $borderWidth $borderColor;
     }
 }
 
@@ -98,7 +115,8 @@ a{
     text-decoration: none;
 
     &:hover{
-
+        filter: none;
+        
         del{
             filter: blur(2px);
         }

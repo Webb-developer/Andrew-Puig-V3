@@ -8,6 +8,7 @@ const browserSync      = require('browser-sync').create();
 const postcss          = require('gulp-postcss');
 const autoprefixer     = require('autoprefixer');
 const htmlmin          = require('gulp-htmlmin');
+const imagemin         = require('gulp-imagemin');
 
 const paths = {
     src: './dist/index.html'
@@ -23,6 +24,14 @@ gulp.task('sass', () => {
         }))
         .pipe(cleanCSS())
         .pipe(gulp.dest("./dist/css"));
+
+});
+
+gulp.task('imagemin', () => {
+
+    return gulp.src('./src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'));
 
 });
 
@@ -77,4 +86,4 @@ gulp.task('watch', function() {
     gulp.watch('./dist/index.html', ['amphtml:validate', 'reload']);
 });
 
-gulp.task('default', ['browser-sync-init', 'watch']);
+gulp.task('default', ['browser-sync-init', 'imagemin', 'watch']);
