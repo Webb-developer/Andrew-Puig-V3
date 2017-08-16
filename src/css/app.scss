@@ -64,7 +64,8 @@ a{
 .section-pair{
     
     @media (min-width: 750px){
-        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -73,7 +74,6 @@ a{
 
     @media (min-width: 750px){
         width: 50%;
-        float: left;
     }
 }
 
